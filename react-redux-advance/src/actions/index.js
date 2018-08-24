@@ -1,5 +1,4 @@
-import { SAVE_COMMENT } from './constants';
-import { FETCH_COMMENTS } from './constants';
+import { SAVE_COMMENT, FETCH_COMMENTS, CHANGE_AUTH } from './constants';
 import axios from 'axios';
 
 export const saveComment = comment => {
@@ -13,5 +12,12 @@ export const fetchComments = () => {
   return {
     type: FETCH_COMMENTS,
     payload: response
+  };
+};
+
+export const changeAuth = loginStatus => {
+  return {
+    type: CHANGE_AUTH,
+    payload: loginStatus
   };
 };
