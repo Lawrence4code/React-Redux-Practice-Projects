@@ -21,7 +21,7 @@ class Suggester extends React.Component {
         this.setState(() => ({ options }));
       }
     } catch (e) {
-      // Do nothing at all
+      // Do nothing
     }
   }
   componentDidUpdate(prevProps, prevState) {
@@ -67,21 +67,25 @@ class Suggester extends React.Component {
   };
 
   render() {
-    const subtitle = 'Put your life in the hands of a computer';
+    const subtitle = 'Load options and let the computer decide...';
 
     return (
       <div>
         <Header subtitle={subtitle} />
-        <Action
-          hasOptions={this.state.options.length > 0}
-          handlePick={this.handlePick}
-        />
-        <Options
-          options={this.state.options}
-          handleDeleteOptions={this.handleDeleteOptions}
-          handleDeleteOption={this.handleDeleteOption}
-        />
-        <AddOption handleAddOption={this.handleAddOption} />
+        <div className="container">
+          <Action
+            hasOptions={this.state.options.length > 0}
+            handlePick={this.handlePick}
+          />
+          <div className="widget">
+            <Options
+              options={this.state.options}
+              handleDeleteOptions={this.handleDeleteOptions}
+              handleDeleteOption={this.handleDeleteOption}
+            />
+            <AddOption handleAddOption={this.handleAddOption} />
+          </div>
+        </div>
         <OptionModal
           selectedOption={this.state.selectedOption}
           HandleClearSelectedOption={this.HandleClearSelectedOption}
