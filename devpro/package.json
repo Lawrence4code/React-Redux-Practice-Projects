@@ -2,6 +2,10 @@
   "name": "devpro",
   "version": "1.0.0",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev-server": "nodemon server.js"
+  },
   "author": "lawrence4code",
   "license": "MIT",
   "dependencies": {

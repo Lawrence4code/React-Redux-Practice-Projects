@@ -1,10 +1,36 @@
 const express = require('express');
+const mongoose = require('mongoose');
+
+const users = require('./routes/api/users');
+const profile = require('./routes/api/profile');
+const posts = require('./routes/api/posts');
 
 const app = express();
 
+// DB config
+const db = require('./config/keys').mongoURI;
+
+// Connect to mongoDB
+mongoose
+  .connect(
+    db,
+    { useNewUrlParser: true }
+  )
+  .then(() => {
+    console.log('mongoDB connected');
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
 app.get('/', (req, res) => {
-  return res.send('Hello.');
+  return res.send('Hello!');
 });
+
+// Use routes
+app.use('/api/users', users);
+app.use('/api/profile', profile);
+app.use('/api/posts', posts);
 
 const port = process.evn || 5000;
 
