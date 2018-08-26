@@ -1,0 +1,42 @@
+Arguments: 
+  /Users/lawrence/.nvm/versions/node/v9.3.0/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js add express mongoose passpost passpost-jwt jsonwebtoken body-parser bcryptjs validator
+
+PATH: 
+  /Users/lawrence/.nvm/versions/node/v9.3.0/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.5/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  9.3.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/passpost: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:64202:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:137468:22)
+      at Request.emit (events.js:159:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:138440:10)
+      at Request.emit (events.js:159:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:138362:12)
+      at Object.onceWrapper (events.js:254:19)
+      at IncomingMessage.emit (events.js:164:20)
+      at endReadableNT (_stream_readable.js:1062:12)
+      at process._tickCallback (internal/process/next_tick.js:152:19)
+
+npm manifest: 
+  {
+    "name": "devpro",
+    "version": "1.0.0",
+    "main": "server.js",
+    "author": "lawrence4code",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
